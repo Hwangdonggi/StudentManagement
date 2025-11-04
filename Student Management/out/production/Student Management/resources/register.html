@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>학생 관리 시스템 - 회원가입</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f5f5f5;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 380px;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 6px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            width: 48%;
+            padding: 10px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 4px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+
+        button.cancel {
+            background-color: #ff5252;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        .btn-box {
+            display: flex;
+            justify-content: space-between;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>회원가입</h2>
+
+    <input type="text" id="name" placeholder="이름 입력">
+    <input type="email" id="email" placeholder="이메일 입력">
+    <input type="password" id="password" placeholder="비밀번호 입력 (8자 이상)">
+    <input type="password" id="confirm" placeholder="비밀번호 재입력">
+
+    <div class="btn-box">
+        <button onclick="register()">가입하기</button>
+        <button class="cancel" onclick="goBack()">취소</button>
+    </div>
+</div>
+
+<script>
+    function register() {
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        alert("가입하기 클릭!\n이름: " + name + "\n이메일: " + email);
+    }
+
+    function goBack() {
+        window.location.href = "login.html";
+    }
+</script>
+
+</body>
+</html>
